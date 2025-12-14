@@ -7,16 +7,19 @@ public class GenerateJalur : MonoBehaviour
     public GameObject parent;
     public GameManager gm;
     public int contoh;
-
+    public GameObject jalan;
+    public Transform mundur;
+    
     void Start() {
+        
         gm = FindFirstObjectByType<GameManager>();
     }
         void OnTriggerEnter(Collider collision)
      {  
          if (collision.gameObject.CompareTag ("Player"))
          {
-            Debug.Log("generate");
-            Instantiate(gm.blokJalan[0][Random.Range(0,gm.blokJalan[0].Count)],new Vector3(0, 0, 700), Quaternion.identity);           
+            Instantiate (jalan,new Vector3(0,0,700), Quaternion.identity,mundur);
+            Instantiate(gm.blokEnemy[0][Random.Range(0,gm.blokEnemy [0].Count)],new Vector3(0, 0, 700), Quaternion.identity,mundur);           
          }
          if (collision.gameObject.CompareTag ("hapus"))
          {

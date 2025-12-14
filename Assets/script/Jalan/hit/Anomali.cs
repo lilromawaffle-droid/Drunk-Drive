@@ -21,7 +21,11 @@ public class Anomali : MonoBehaviour
         }
        if (collision.gameObject.tag == "gerak")
         {
-            
+            //animasi
+        }
+        if(collision.gameObject.tag == "hapus")
+        {
+            Destroy(this.gameObject);
         }
     }
 }

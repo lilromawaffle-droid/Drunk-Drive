@@ -32,11 +32,11 @@ public class GameManager : MonoBehaviour
     public int currenttWaktu;
 
     //prefab jalan
-    public List<GameObject> blokJalan1= new List<GameObject>(); 
-    public List<GameObject> blokJalan2= new List<GameObject>(); 
-    public List<GameObject> blokJalan3= new List<GameObject>(); 
-    public List<GameObject> blokJalan4= new List<GameObject>(); 
-    public List<List<GameObject>> blokJalan = new List<List<GameObject>>{}; 
+    public List<GameObject> blokEnemy1= new List<GameObject>(); 
+    public List<GameObject> blokEnemy2= new List<GameObject>(); 
+    public List<GameObject> blokEnemy3= new List<GameObject>(); 
+    public List<GameObject> blokEnemy4= new List<GameObject>(); 
+    public List<List<GameObject>> blokEnemy = new List<List<GameObject>>{}; 
 
 
     void Start()
@@ -85,20 +85,20 @@ public class GameManager : MonoBehaviour
 
     void RefreshActiveBlocks()
     {
-        blokJalan.Clear();
+        blokEnemy.Clear();
         switch (stage)
         {
             case Stages.pertama:
-                blokJalan.Add(blokJalan1);
+                blokEnemy.Add(blokEnemy1);
                 break;
             case Stages.kedua:
-                blokJalan.Add(blokJalan2);
+                blokEnemy.Add(blokEnemy2);
                 break;
             case Stages.ketiga:
-                blokJalan.Add(blokJalan3);
+                blokEnemy.Add(blokEnemy3);
                 break;
             case Stages.keempat:
-                blokJalan.Add(blokJalan4);
+                blokEnemy.Add(blokEnemy4);
                 break;
         }
     }

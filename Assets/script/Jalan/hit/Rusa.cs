@@ -18,12 +18,16 @@ public class Rusa : MonoBehaviour
         
     }
 
-    void OnCollisionEnter(Collision collision)
+    void OnTriggerEnter(Collider collision)
     {
        if (collision.gameObject.tag == "Player")
         {
             Debug.Log("rusa");
             gm.Status = GameManager.GameState.kalah;
+        }
+        if(collision.gameObject.tag == "hapus")
+        {
+            Destroy(this.gameObject);
         }
     }
 }

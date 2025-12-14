@@ -31,12 +31,5 @@ public class Jalan : MonoBehaviour
          }
     }
 
-    void OnCollisionEnter(Collision other)
-    {
-        if (other.gameObject.CompareTag("hapus"))
-        {
-            Debug.Log("hapus");
-            this.gameObject.SetActive(false);
-        }
-    }
+
 }
