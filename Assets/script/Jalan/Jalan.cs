@@ -8,21 +8,12 @@ using UnityEngine.UI;
 public class Jalan : MonoBehaviour
 {
     GameManager gm;
-    ProgresBar pg;
-    public float delay;
     
-    public List<GameObject> spawn1 = new List<GameObject>();
-    public List<GameObject> spawn2 = new List<GameObject>();
-    public List<GameObject> spawn3 = new List<GameObject>();
-    public List<GameObject> spawn4 = new List<GameObject>();
-    public List<GameObject> spawn5 = new List<GameObject>();
 
     void Start()
     {
         gm = FindFirstObjectByType<GameManager>();
-        Instantiate(gm.listEnemy[Random.Range(0,1)],new Vector3(0,0,0),Quaternion.identity);
     }
-
 
 
     void Update()
@@ -48,6 +39,4 @@ public class Jalan : MonoBehaviour
             this.gameObject.SetActive(false);
         }
     }
-
-
 }

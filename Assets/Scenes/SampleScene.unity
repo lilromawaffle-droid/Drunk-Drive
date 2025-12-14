@@ -275,15 +275,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b291ec9c71efa2b49875857680ab488b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  p: {fileID: 1006358236}
   Status: 0
   stage: 0
   hit: 0
-  speed: 10
+  speed: 150
   currenttWaktu: 0
-  listEnemy:
-  - {fileID: 6043294399811866530, guid: 66dae07e73098a341a2c205cc53fa28a, type: 3}
-  listDeer:
-  - {fileID: 5667526878529559701, guid: e5cfb991fd838fa4db12e6e1c45bdb4d, type: 3}
+  blokJalan1:
+  - {fileID: 3208407736498760205, guid: b66e278b79fdb9249a94c9a73c6543dc, type: 3}
+  blokJalan2:
+  - {fileID: 3208407736498760205, guid: b66e278b79fdb9249a94c9a73c6543dc, type: 3}
+  blokJalan3:
+  - {fileID: 3208407736498760205, guid: b66e278b79fdb9249a94c9a73c6543dc, type: 3}
+  blokJalan4:
+  - {fileID: 3208407736498760205, guid: b66e278b79fdb9249a94c9a73c6543dc, type: 3}
 --- !u!1 &72377606
 GameObject:
   m_ObjectHideFlags: 0
@@ -721,7 +726,7 @@ Transform:
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
   m_LocalRotation: {x: 0.1564345, y: 0, z: 0, w: 0.98768836}
-  m_LocalPosition: {x: 0, y: 11.7, z: 0}
+  m_LocalPosition: {x: -10, y: 11.7, z: 15}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1492,7 +1497,7 @@ MonoBehaviour:
   - {fileID: 1596812854}
   - {fileID: 487206897}
   target: 0
-  speed: 200
+  speed: 150
   playerstate: 0
 --- !u!65 &1006358237
 BoxCollider:
@@ -2194,6 +2199,37 @@ Transform:
   - {fileID: 1304153688}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1566532978
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1566532979}
+  m_Layer: 0
+  m_Name: 'Enemy '
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1566532979
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1566532978}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 26.87704}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1596812854
 GameObject:
   m_ObjectHideFlags: 0
@@ -2777,6 +2813,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BlokJalan
       objectReference: {fileID: 0}
+    - target: {fileID: 4457783275293440353, guid: b66e278b79fdb9249a94c9a73c6543dc, type: 3}
+      propertyPath: gm
+      value: 
+      objectReference: {fileID: 71264182}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2792,3 +2832,4 @@ SceneRoots:
   - {fileID: 1695518685}
   - {fileID: 2066587907}
   - {fileID: 72377609}
+  - {fileID: 1566532979}
